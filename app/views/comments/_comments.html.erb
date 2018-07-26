@@ -1,0 +1,12 @@
+<div align="center">
+    <%= will_paginate comments %>
+</div>
+<!-- comments was obtained from when this partial was called from recipes show page. there we are passing an object @comments. That can be used here as comment -->
+
+<% comments.each do |comment| %>
+    <%= render partial: 'comments/comment', object: comment %>
+<% end %>
+
+<div align="center">
+    <%= will_paginate comments %>
+</div>
